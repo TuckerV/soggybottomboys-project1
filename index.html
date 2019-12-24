@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/7aea5abbf9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">>
     <title>Soggy Bottom Streaming Search</title>
 
 </head>
@@ -65,68 +66,103 @@
 
 <!--this is the initial form for choosing services-->
 <div class="container">
-    <div class="field is-horizontal">
-        <div class="field-label">
-          <label class="label">Disney +</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                Checkbox
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label">
-          <label class="label">Netflix</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                Checkbox
-              </label>
-            </div>
-          </div>
-        </div>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="title">
+          Please select the subscriptions you own
+        </h3>
       </div>
+    </div>
+  </section>
 
-      <div class="field is-horizontal">
-        <div class="field-label">
-          <label class="label">Hulu</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                Checkbox
-              </label>
-            </div>
-          </div>
+  <div class="field is-horizontal">
+    <div class="field-label">
+      <label class="label">Disney +</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+            <input type="checkbox">
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="field is-grouped">
+  <div class="field is-horizontal">
+    <div class="field-label">
+      <label class="label">Netflix</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
         <div class="control">
-          <button class="button is-link">Submit</button>
+            <input type="checkbox">
         </div>
       </div>
+    </div>
+  </div>
 
-
-
-      <footer class="footer">
-        <div class="content has-text-centered">
-         this is our footer!
+  <div class="field is-horizontal">
+    <div class="field-label">
+      <label class="label">Hulu</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+            <input type="checkbox">
         </div>
-      </footer>
+      </div>
+    </div>
+  </div>
+      
+  <div class="field is-grouped">
+    <div class="control">
+        <button class="button is-link">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!--movie search form-->
+<div class="container">
+  <div class="field">
+    <div class="control">
+      <label class="label">Title</label>
+      <input class="input is-danger" type="text" placeholder="Movie or T.V. Show Name">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <label class="label">Genres</label>
+      <input class="input is-danger" type="text" placeholder="Genre">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <label class="label">Rating</label>
+      <input class="input is-danger" type="text" placeholder="Rating">
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+        <button class="button is-link">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!--results div-->
+<div class="container">
+
+</div>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    This webpage made by the Soggy Bottom Boys of the UoU coding bootcamp.
+  </div>
+</footer>
+
+<script src="script.js"></script>
 
   </body>
 </html>
