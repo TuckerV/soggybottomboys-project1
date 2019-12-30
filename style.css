@@ -1,1 +1,9 @@
 /* CSS */
+/* .hide{
+    display: none;
+} */
+
+#disney-btn, #netflix-btn,
+#hulu-btn, .label {
+    font-size: x-large;
+}
