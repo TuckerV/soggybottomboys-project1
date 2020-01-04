@@ -46,7 +46,7 @@
   <div class="navbar-end">
     <div class="navbar-item">
       <div class="buttons">
-        <a class="button is-primary">
+        <a class="button is-primary has-background-danger">
           <strong>Start Over</strong>
         </a>
       </div>
@@ -76,10 +76,10 @@
       </div>
     </div>
   </section>
-
-  <div class="field is-horizontal">
+<div class="columns">
+  <div id="disney-btn" class="field is-horizontal column">
     <div class="field-label">
-      <label class="label">Disney +</label>
+      <label class="label">Disney+</label>
     </div>
     <div class="field-body">
       <div class="field">
@@ -90,9 +90,9 @@
     </div>
   </div>
 
-  <div class="field is-horizontal">
+  <div class="field is-horizontal column">
     <div class="field-label">
-      <label class="label">Netflix</label>
+      <label id="netflix-btn" class="label">Netflix</label>
     </div>
     <div class="field-body">
       <div class="field">
@@ -103,7 +103,7 @@
     </div>
   </div>
 
-  <div class="field is-horizontal">
+  <div id="hulu-btn" class="field is-horizontal column">
     <div class="field-label">
       <label class="label">Hulu</label>
     </div>
@@ -115,41 +115,46 @@
       </div>
     </div>
   </div>
-      
+</div>   
   <div class="field is-grouped">
     <div class="control">
-        <button class="button is-link">Submit</button>
+        <button class="button is-link has-background-danger">Submit</button>
     </div>
   </div>
 </div>
 
 <!--movie search form-->
+<form class="hide">
 <div class="container">
   <div class="field">
     <div class="control">
       <label class="label">Title</label>
-      <input class="input is-danger" id="titleInput" type="text" placeholder="Movie or T.V. Show Name">
+
+      <input id="titleInput" class="input is-warning" type="text" placeholder="Movie or T.V. Show Name">
+
     </div>
   </div>
   <div class="field">
     <div class="control">
       <label class="label">Genres</label>
-      <input class="input is-danger" type="text" placeholder="Genre">
+      <input class="input is-warning" type="text" placeholder="Genre">
     </div>
   </div>
   <div class="field">
     <div class="control">
       <label class="label">Rating</label>
-      <input class="input is-danger" type="text" placeholder="Rating">
+      <input class="input is-warning" type="text" placeholder="Rating">
     </div>
   </div>
   <div class="field is-grouped">
     <div class="control">
-        <button class="button is-link" id="searchBtn">Submit</button>
+
+        <button id="searchBtn" class="button is-link has-background-danger">Submit</button>
+
     </div>
   </div>
 </div>
-
+</form>
 <!--results div-->
 <div class="container" id="resultsDiv">
 
