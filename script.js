@@ -73,10 +73,18 @@ function utellyCall(){
     
     $.ajax(settings).done(function (response) {
         console.log(response);
-        console.log(response.results[0].picture)
-        var imgURL =  response.results[0].picture;
-        var picture = $("<img>").attr("src", imgURL);
-        $("#resultsDiv").prepend(picture);
+        // console.log(response.results[0].picture)
+        // var imgURL =  response.results[0].picture;
+        // var picture = $("<img>").attr("src", imgURL);
+        // $("#resultsDiv").prepend(picture);
+
+        var locationsDiv = $("<div id='locations' style ='border: solid 3px black'>")
+        $("#resultsDiv").prepend(locationsDiv);
+        for (var i = 0; i < response.results[0].locations.length; i++){
+            var newResponse = $("<p>").text(i+1 + " " + response.results[0].locations[i].display_name);
+            $("#locations").append(newResponse);
+        }
+
     });
 }
 
