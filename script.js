@@ -58,7 +58,8 @@ function displayMovieInfo() {
 
 }
 
-$("#searchBtn").on("click", function(){
+$("#searchBtn").on("click", function(event){
+    event.preventDefault();
     movie = $("#titleInput").val().trim();
     displayMovieInfo();
 });
