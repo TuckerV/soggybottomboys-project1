@@ -7,3 +7,14 @@
 #hulu-btn, .label {
     font-size: x-large;
 }
+body {
+    background-image: url("https://cdn.vox-cdn.com/thumbor/WMCeeSdqZyv7iqXqKOopfkM3CQc=/0x0:4800x3557/1720x0/filters:focal(0x0:4800x3557):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/3817480/GettyImages-146124343.0.jpg")
+}
+
+#resultsDiv {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }
