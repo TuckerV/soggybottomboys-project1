@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/7aea5abbf9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
     <title>Soggy Bottom Streaming Search</title>
 
 </head>
@@ -58,7 +59,7 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          "Oh Movies Where Art Thou"
+          "O Movies, Where Art Thou?"
         </h1>
       </div>
     </div>
@@ -124,7 +125,7 @@
 </div> -->
 
 <!--movie search form-->
-<form class="hide">
+<form>
 <div class="container">
   <div class="field">
     <div class="control">
@@ -134,7 +135,8 @@
 
     </div>
   </div>
-  <div class="field">
+  <!-- Can add genres and rating later if we have time -->
+  <!-- <div class="field">
     <div class="control">
       <label class="label">Genres</label>
       <input class="input is-warning" type="text" placeholder="Genre">
@@ -145,20 +147,21 @@
       <label class="label">Rating</label>
       <input class="input is-warning" type="text" placeholder="Rating">
     </div>
-  </div>
+  </div> -->
   <div class="field is-grouped">
-    <div class="control">
+    <div class="control"> 
 
         <button id="searchBtn" class="button is-link has-background-danger">Submit</button>
 
     </div>
   </div>
 </div>
+<div class="container hide" id="resultsDiv">
+</div>
+<br>
 </form>
 <!--results div-->
-<div class="container" id="resultsDiv">
 
-</div>
 
 
 <footer class="footer">

@@ -90,6 +90,7 @@ function utellyCall(){
 
 $("#searchBtn").on("click", function(event){
     event.preventDefault();
+    $("#resultsDiv").removeClass("hide");
     movie = $("#titleInput").val().trim();
     displayMovieInfo();
     utellyCall();
