@@ -58,8 +58,31 @@ function displayMovieInfo() {
 
 }
 
+
+function utellyCall(){
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term="+ movie +"&country=uk",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+            "x-rapidapi-key": "bf012d91demsh0ba427a25254120p156415jsneea3b96d469b"
+        }
+    }
+    
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        console.log(response.results[0].picture)
+        var imgURL =  response.results[0].picture;
+        var picture = $("<img>").attr("src", imgURL);
+        $("#resultsDiv").prepend(picture);
+    });
+}
+
 $("#searchBtn").on("click", function(event){
     event.preventDefault();
     movie = $("#titleInput").val().trim();
     displayMovieInfo();
+    utellyCall();
 });
