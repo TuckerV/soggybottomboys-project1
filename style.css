@@ -38,3 +38,6 @@ form {
     width: 100%;
    height: 25px !important;
   }
+  .navbar-item{
+    font-family: 'Kumar One', cursive;
+  }
