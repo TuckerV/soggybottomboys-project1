@@ -50,12 +50,12 @@ function displayMovieInfo() {
         var image = $("<img>").attr("src", imgURL);
 
         // Appending the image
-        movieDiv.append(image);
+        // movieDiv.append(image);
+        $(".card-image").attr("src", imgURL);
 
         // Putting the entire movie above the previous movies
-        $("#resultsDiv").prepend(movieDiv);
+        $(".insideCard").append(movieDiv);
     });
-
 }
 
 
@@ -73,25 +73,26 @@ function utellyCall(){
     
     $.ajax(settings).done(function (response) {
         console.log(response);
-        // console.log(response.results[0].picture)
-        // var imgURL =  response.results[0].picture;
-        // var picture = $("<img>").attr("src", imgURL);
-        // $("#resultsDiv").prepend(picture);
-
+        $(".title").text(response.results[0].name);
         var locationsDiv = $("<div id='locations' style ='border: solid 3px black'>")
-        $("#resultsDiv").prepend(locationsDiv);
+        $(".card-content").append(locationsDiv);
         for (var i = 0; i < response.results[0].locations.length; i++){
             var newResponse = $("<p>").text(i+1 + " " + response.results[0].locations[i].display_name);
             $("#locations").append(newResponse);
         }
-
     });
+}
+
+function createCard(){
+    var card = $("<div class='card'><div class='card-image'><figure class='image is-5by3'><img class='card-image' src='https://bulma.io/images/placeholders/500x300.png' alt='Placeholder image'></figure></div> <div class='card-content'><p class='title is-4'></p><div class='content insideCard'></div></div></div>");
+    $("#resultsDiv").prepend(card);
 }
 
 $("#searchBtn").on("click", function(event){
     event.preventDefault();
     $("#resultsDiv").removeClass("hide");
     movie = $("#titleInput").val().trim();
+    createCard();
     displayMovieInfo();
     utellyCall();
 });
