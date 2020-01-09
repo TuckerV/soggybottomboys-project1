@@ -1,6 +1,7 @@
 // JAVASCRIPT
 var movie;
-
+var ticker=0;
+var deleteTicker;
 function displayMovieInfo() {
 
     // movie = "Aladin"
@@ -12,7 +13,7 @@ function displayMovieInfo() {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-
+        console.log(response);
         // Creating a div to hold the movie
         var movieDiv = $("<div class='movie'>");
 
@@ -51,10 +52,12 @@ function displayMovieInfo() {
 
         // Appending the image
         // movieDiv.append(image);
-        $(".card-image").attr("src", imgURL);
+        // debugger
+        console.log(ticker);
+        $(".card-image"+ticker).attr("src", imgURL);
 
         // Putting the entire movie above the previous movies
-        $(".insideCard").append(movieDiv);
+        $(".insideCard"+ticker).append(movieDiv);
     });
 }
 
@@ -73,19 +76,32 @@ function utellyCall(){
     
     $.ajax(settings).done(function (response) {
         console.log(response);
-        $(".title").text(response.results[0].name);
+        $("#title"+ticker).text(response.results[0].name);
         var locationsDiv = $("<div id='locations' style ='border: solid 3px black'>")
-        $(".card-content").append(locationsDiv);
+        console.log(ticker);
+        $(".card-content"+ticker).append(locationsDiv);
         for (var i = 0; i < response.results[0].locations.length; i++){
             var newResponse = $("<p>").text(i+1 + " " + response.results[0].locations[i].display_name);
             $("#locations").append(newResponse);
         }
+    }).then(function(){
+        ticker++;
     });
+    
+}
+
+function deleteOldest(){
+    deleteTicker = ticker - 4;
+    console.log(deleteTicker);
+    $("#cardNumber"+deleteTicker).remove();
 }
 
 function createCard(){
-    var card = $("<div class='card'><div class='card-image'><figure class='image is-5by3'><img class='card-image' src='https://bulma.io/images/placeholders/500x300.png' alt='Placeholder image'></figure></div> <div class='card-content'><p class='title is-4'></p><div class='content insideCard'></div></div></div>");
-    $("#resultsDiv").prepend(card);
+    console.log(ticker + " ticker count at card creation");
+    var card = $("<div class='card column' id='cardNumber"+ticker+"'><div class='card-image'><figure class='image is-5by3'><img class='card-image"+ticker+"' src='' alt='Placeholder image'></figure></div> <div class='card-content"+ticker+"'><p class='title is-4' id='title"+ticker+"'></p><div class='content insideCard"+ticker+"'></div></div></div>");
+    $("#resultsRow").prepend(card);
+
+    deleteOldest();
 }
 
 $("#searchBtn").on("click", function(event){
