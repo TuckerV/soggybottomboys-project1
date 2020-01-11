@@ -86,6 +86,7 @@ function utellyCall(){
         }
     }).then(function(){
         ticker++;
+        $("#titleInput").val('');
     });
     
 }
@@ -111,6 +112,7 @@ $("#searchBtn").on("click", function(event){
     createCard();
     displayMovieInfo();
     utellyCall();
+
 });
 
 $("#clearBtn").on("click", function(event){
