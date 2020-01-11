@@ -7,13 +7,18 @@
 #hulu-btn,  */
 .label {
     font-size: x-large;
-    outline-color: white 2px;
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+    1px 1px 0 white;
+    font-family: 'Kumar One', cursive;
 }
 body {
     background-image: url("https://cdn.vox-cdn.com/thumbor/WMCeeSdqZyv7iqXqKOopfkM3CQc=/0x0:4800x3557/1720x0/filters:focal(0x0:4800x3557):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/3817480/GettyImages-146124343.0.jpg");
     height: 100%;
 }
-form {
+.onload, .contactform {
     height: 867px;
     margin-bottom: 20px !important;
 }
@@ -31,7 +36,11 @@ form {
     font-family: 'Kumar One', cursive;
     font-size: 72px !important;
     align-content: center !important;
-    outline-color: white;
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
   }
   .footer2{
     position: fixed;
@@ -43,9 +52,21 @@ form {
   }
   .navbar-item{
     font-family: 'Kumar One', cursive;
-    outline-color: white;
   }
 
   .card {
     box-shadow: none !important;
+   
+  }
+  p {
+    font-family: 'Kumar One', cursive;
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+  }
+  .onsubmit {
+    height: 100%;
+    margin-bottom: 20px !important;
   }
