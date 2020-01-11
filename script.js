@@ -112,3 +112,9 @@ $("#searchBtn").on("click", function(event){
     displayMovieInfo();
     utellyCall();
 });
+
+$("#clearBtn").on("click", function(event){
+    // event.preventDefault();
+    $("#resultsRow").empty();
+    $("#resultsDiv").addClass("hide");
+})
