@@ -77,7 +77,7 @@ function utellyCall(){
     $.ajax(settings).done(function (response) {
         console.log(response);
         $("#title"+ticker).text(response.results[0].name);
-        var locationsDiv = $("<div id='locations' style ='border: solid 3px black'>")
+        var locationsDiv = $("<div id='locations'>")
         console.log(ticker);
         $(".card-content"+ticker).append(locationsDiv);
         for (var i = 0; i < response.results[0].locations.length; i++){
@@ -98,9 +98,8 @@ function deleteOldest(){
 
 function createCard(){
     console.log(ticker + " ticker count at card creation");
-    var card = $("<div class='card column' id='cardNumber"+ticker+"'><div class='card-image'><figure class='image is-5by3'><img class='card-image"+ticker+"' src='' alt='Placeholder image'></figure></div> <div class='card-content"+ticker+"'><p class='title is-4' id='title"+ticker+"'></p><div class='content insideCard"+ticker+"'></div></div></div>");
+    var card = $("<div class='card column' id='cardNumber"+ticker+"'><div class='card-image'><figure class='image is-5by3'><img class='card-image"+ticker+"' src='' alt='Placeholder image'></figure></div> <div class='card-content"+ticker+"'><p class='title is-3' id='title"+ticker+"'></p><div class='content insideCard"+ticker+"'></div><p class='title is-5'>Available Streaming Locations: </p></div></div>");
     $("#resultsRow").prepend(card);
-
     deleteOldest();
 }
 
