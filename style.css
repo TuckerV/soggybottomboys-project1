@@ -89,3 +89,7 @@ body {
     background-color: ivory;
     margin-bottom: 50px;
   }
+
+  .card-image {
+    margin-bottom: 5px;
+  }
