@@ -62,46 +62,46 @@
 <!--contact form-->
 <div class="container">
 
-<form>
+<form action="https://formspree.io/mlejdwwa" method="POST">
     <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Your Name">
+          <input class="input" type="text" name="personName" placeholder="Your Name">
         </div>
       </div>
       
       <div class="field">
         <label class="label">Email</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-danger" type="email" placeholder="Email input">
+          <input class="input is-danger" type="email" name="theirEmail" placeholder="Email input">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
         </div>
       </div>
       
-      <div class="field">
+      <!-- <div class="field">
         <label class="label">Subject</label>
         <div class="control">
-          <div class="select">
+          <div class="select" name="contactOrReport">
             <select>
               <option>Contact</option>
               <option>Report a Problem</option>
             </select>
           </div>
         </div>
-      </div>
+      </div> -->
       
       <div class="field">
         <label class="label">Message</label>
         <div class="control">
-          <textarea class="textarea" placeholder="Textarea"></textarea>
+          <textarea class="textarea" name="message" placeholder="Textarea"></textarea>
         </div>
       </div>
       
     <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link">Submit</button>
+          <button type="submit" class="button is-link">Submit</button>
         </div>
     </div>
 </form>
