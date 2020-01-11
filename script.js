@@ -106,6 +106,7 @@ function createCard(){
 $("#searchBtn").on("click", function(event){
     event.preventDefault();
     $("#resultsDiv").removeClass("hide");
+    $("#mainPageForm").removeClass("onload").addClass("onsubmit");
     movie = $("#titleInput").val().trim();
     createCard();
     displayMovieInfo();
@@ -116,4 +117,5 @@ $("#clearBtn").on("click", function(event){
     // event.preventDefault();
     $("#resultsRow").empty();
     $("#resultsDiv").addClass("hide");
+    $("#mainPageForm").removeClass("onsubmit").addClass("onload");
 })
