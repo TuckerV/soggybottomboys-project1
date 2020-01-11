@@ -70,3 +70,22 @@ body {
     height: 100%;
     margin-bottom: 20px !important;
   }
+  .aboutparagraph {
+    font-size: 20px;
+  }
+  .aboutimage {
+    height: 500px;
+    width: 500px;
+  }
+  .firstparagraph {
+    text-align: center;
+  }
+  .aboutdiv {
+    border-radius: 25px;
+    border: 2px solid #FFDD58;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background-color: ivory;
+    margin-bottom: 50px;
+  }
