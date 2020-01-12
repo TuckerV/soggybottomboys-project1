@@ -7,11 +7,11 @@ Our site is a streaming search for movies and TV shows.
 
 ## Contents
 * Landing / Search Page
-![screenshot]()
+![screenshot](https://github.com/TuckerV/soggybottomboys-project1/blob/master/assets/images/search%20page.jpg?raw=true)
 * About Page
-![screenshot]()
+![screenshot](https://github.com/TuckerV/soggybottomboys-project1/blob/master/assets/images/about%20page.jpg?raw=true)
 * Contact Page
-![screenshot]()
+![screenshot](https://github.com/TuckerV/soggybottomboys-project1/blob/master/assets/images/contact%20page.jpg?raw=true)
 
 ## Instructions
 You can search movies and tv shows to find the available streaming searches. There is a max search of 4 movies, at that point the latest search will be erased.
