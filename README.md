@@ -14,7 +14,7 @@ Our site is a streaming search for movies and TV shows.
 ![screenshot](https://github.com/TuckerV/soggybottomboys-project1/blob/master/assets/images/contact%20page.jpg?raw=true)
 
 ## Instructions
-You can search movies and tv shows to find the available streaming searches. There is a max search of 4 movies, at that point the latest search will be erased.
+You can search movies and tv shows to find the available streaming searches. The display shows a maximum of 4 movies at a time, at that point the oldest search will be erased.
 
 ## Future Updates
 * further filtering of genre and rating  
